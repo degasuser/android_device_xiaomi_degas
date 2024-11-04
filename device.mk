@@ -125,6 +125,9 @@ PRODUCT_PACKAGES += \
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+PRODUCT_PACKAGES += \
+    libstagefright_foundation-v33
+
 # Dalvik configs
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapstartsize=24m \
