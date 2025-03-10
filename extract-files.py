@@ -94,9 +94,13 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/libcodec2_soft_ac4dec.so', 'vendor/lib64/libcodec2_soft_ddpdec.so'): blob_fixup()
         .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common_prebuilt.so'),
 
-    # Dolby Codec2 Patch
     'vendor/bin/hw/dolbycodec2': blob_fixup()
         .add_needed('libshim_codec2_hidl.so'),
+
+    ('odm/lib64/libmt_mitee.so',
+     'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee'): blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V3-ndk.so', 'android.hardware.security.keymint-V4-ndk.so'),
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
