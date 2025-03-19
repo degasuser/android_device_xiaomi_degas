@@ -1,13 +1,6 @@
 # 1. Apply Git Changes (Source Modification)
 echo "Applying source modifications..."
 
-# UDFPS Patch for frameworks/base
-echo "Fetching and applying UDFPS patch for frameworks/base..."
-cd frameworks/base
-git fetch https://github.com/xiaomi-mt6897-duchamp/axion-1.2_frameworks_base
-git cherry-pick 5622493fe96301728fa2d409edd3ce8e7225ade7 596798032f7fa5445ca96626aeb3df7c6acdf624
-cd ../../
-
 # Hardware Compatibility Fixes
 echo "Fetching and applying hardware compatibility fixes for hardware/lineage/compat..."
 cd hardware/lineage/compat
