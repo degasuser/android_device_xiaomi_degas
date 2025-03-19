@@ -152,6 +152,10 @@ PRODUCT_COPY_FILES += \
 # Google Camera
 $(call inherit-product-if-exists, vendor/mgc/config.mk)
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.mt6897
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
