@@ -21,6 +21,7 @@ namespace_imports = [
     'device/xiaomi/duchamp',
     'hardware/mediatek',
     'hardware/xiaomi',
+    'hardware/dolby',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
