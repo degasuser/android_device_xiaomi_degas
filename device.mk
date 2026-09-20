@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/duchamp
+DEVICE_PATH := device/xiaomi/degas
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -206,11 +206,8 @@ PRODUCT_PACKAGES += \
    TetheringResOverlayDuchamp \
    WifiOverlay
 
-PRODUCT_PACKAGES += \
-   LineageApertureOverlayDuchamp \
-   LineageDialerDuchamp \
-   LineageSDKOverlayDuchamp \
-   LineageSettingsOverlayDuchamp
+
+   
 
 # Parts
 PRODUCT_PACKAGES += \
@@ -360,9 +357,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+
+    
 
 # Logging
 SPAMMY_LOG_TAGS := \
@@ -419,4 +415,4 @@ PRODUCT_PACKAGES += \
     wpa_supplicant
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/duchamp/duchamp-vendor.mk)
+$(call inherit-product, vendor/xiaomi/degas/degas-vendor.mk)
