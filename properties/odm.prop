@@ -18,4 +18,4 @@ ro.product.property_source_order=odm,vendor,product,system_ext,system
 import /odm/etc/${ro.boot.hwc}.prop
 
 # TouchFeature
-ro.vendor.touchfeature.type=243
+ro.vendor.touchfeature.type=255
