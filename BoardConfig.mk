@@ -42,7 +42,7 @@ TARGET_CPU_VARIANT := cortex-a76
 IGNORE_PREFER32_ON_DEVICE := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := duchamp
+TARGET_BOOTLOADER_BOARD_NAME := degas
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -102,7 +102,7 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-k
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 
-TARGET_KERNEL_CONFIG := duchamp
+TARGET_KERNEL_CONFIG := degas
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6897
 
 # Partitions
@@ -229,4 +229,4 @@ WIFI_FEATURE_HOSTAPD_11AX := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
-include vendor/xiaomi/duchamp/BoardConfigVendor.mk
+include vendor/xiaomi/degas/BoardConfigVendor.mk
